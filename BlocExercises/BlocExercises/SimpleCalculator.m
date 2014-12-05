@@ -14,7 +14,7 @@
     /* WORK HERE */
     
     NSInteger newNumber = 1;
-    NSLog(@"newNumber is now %i", newNumber++);
+    NSLog(@"newNumber is now %d", newNumber++);
     
     return number;
 }
@@ -26,7 +26,7 @@
     NSInteger newNumber2 = 6;
     NSInteger newNumber3 = newNumber1 + newNumber2;
     
-    NSLog(@"Simple addition...this should equal %i", newNumber3);
+    NSLog(@"Simple addition...this should equal %d", newNumber3);
     
     return number1;
 }
@@ -37,7 +37,7 @@
     NSInteger newDividend = 42;
     NSInteger newDivisor = 5;
     
-    NSLog(@"The remainder of 42 / 5 is %i", newDividend % newDivisor);
+    NSLog(@"The remainder of 42 / 5 is %d", newDividend % newDivisor);
     
     return 0;
 }
