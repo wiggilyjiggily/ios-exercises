@@ -21,6 +21,7 @@
     NSString *shortCheese = cheeseName;
     shortCheese = [shortCheese stringByReplacingOccurrencesOfString:@"cheese" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [shortCheese length])];
     
+    
     return shortCheese;
 }
 
