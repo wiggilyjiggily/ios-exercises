@@ -12,17 +12,25 @@
 
 - (NSString *)favoriteDrinkForStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
-    return @"";
+    id favoriteDrink = characterDictionary[@"favorite drink"];
+    if (favoriteDrink != nil && [favoriteDrink isKindOfClass:[NSString class]]) {
+        return favoriteDrink;
+    } else {
+        return nil;
+    }
 }
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     /* WORK HERE */
-    return @[];
+    NSArray *favoriteDrinks = [charactersArray valueForKey:@"favorite drink"];
+    return favoriteDrinks;
 }
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
-    return @{};
+    NSMutableDictionary *characterQuotes = [characterDictionary mutableCopy];
+    [characterQuotes setObject:@"Today is a good day to die." forKey:@"quote"];
+    return characterQuotes;
 }
 
 @end

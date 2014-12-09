@@ -24,26 +24,26 @@
 
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
     /* WORK HERE */
-    NSSortDescriptor *charactersInAlphabeticalOrder = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
-    [characterArray sortUsingDescriptors:@selector[charactersInAlphabeticalOrder]];
-    return @[];
-
+    NSMutableArray *alphabeticalCharacterArray = [characterArray mutableCopy];
+    NSSortDescriptor *trekSorter = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
+    [alphabeticalCharacterArray sortUsingDescriptors:@[trekSorter]];
+    return alphabeticalCharacterArray;
+}
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
     /* WORK HERE */
+    NSMutableArray *findWorf = [characterArray mutableCopy];
+    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
+    [findWorf filterUsingPredicate:containsWorf];
+    for (NSString *test in findWorf) {
+//        if (<#condition#>) {
+//            return @"yes";
+//        }
+    }
     return NO;
 }
 
 @end
-
-
-
-
-
-
-
-
-
 
 
 

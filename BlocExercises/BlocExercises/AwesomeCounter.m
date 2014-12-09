@@ -12,21 +12,18 @@
 
 - (NSString *) stringWithNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
-    NSString *numberInString = @"";
+    NSString *numbersInString = @"";
     
     if (otherNumber > number) {
-        for (number; number < otherNumber; number++) {
-            numberInString = [numberInString stringByAppendingString:[NSString stringWithFormat:@"%d", number]];
+        for (number; number <= otherNumber; number++) {
+            numbersInString = [numbersInString stringByAppendingString:[NSString stringWithFormat:@"%d", number]];
         }
     } else {
-        for (otherNumber; otherNumber < number; otherNumber++) {
-            NSLog(@"");
+        for (otherNumber; otherNumber <= number; otherNumber++) {
+            numbersInString = [numbersInString stringByAppendingString:[NSString stringWithFormat:@"%d", otherNumber]];
         }
     }
-    return @"";
+    return numbersInString;
 }
 
 @end
-
-NSString *urlStr = [urlString stringByAppendingFormat:@"%i", self.newrow];
-NSString *lottoNumbers = [luckyLotto componentsJoinedByString:@", "];
