@@ -35,12 +35,7 @@
     NSMutableArray *findWorf = [characterArray mutableCopy];
     NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
     [findWorf filterUsingPredicate:containsWorf];
-    for (NSString *test in findWorf) {
-//        if (<#condition#>) {
-//            return @"yes";
-//        }
-    }
-    return NO;
+    return findWorf.count > 0;
 }
 
 @end
