@@ -19,7 +19,19 @@
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
     NSMutableArray *myArrayNumbersBetween = [NSMutableArray mutableCopy];
-    return @[];
+    
+    if (otherNumber > number) {
+        for (NSInteger i = number; i <= otherNumber; i++) {
+            NSNumber *newNumber = [NSNumber numberWithInteger:i];
+            [myArrayNumbersBetween addObject:newNumber];
+        }
+    } else {
+        for (NSInteger i = otherNumber; i <= number; i++) {
+            NSNumber *newNumber = [NSNumber numberWithInteger:i];
+            [myArrayNumbersBetween addObject:newNumber];
+        }
+    }
+    return myArrayNumbersBetween;
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
